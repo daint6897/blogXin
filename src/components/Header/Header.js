@@ -6,7 +6,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import { ScreenWidthContext } from "../../layouts";
 import config from "../../../content/meta/config";
 import Menu from "../Menu";
-
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import avatar from "../../images/jpg/avatar.jpg";
 
 class Header extends React.Component {
@@ -44,6 +44,9 @@ class Header extends React.Component {
               <h2>{config.headerSubTitle}</h2>
             </div>
           </Link>
+
+        
+
             <ScreenWidthContext.Consumer>
               {width => (
                 <Menu

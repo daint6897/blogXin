@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 export default class HTML extends React.Component {
   render() {
     return (
+
       <html {...this.props.htmlAttributes}>
         <head>
           <meta charSet="utf-8" />
@@ -32,6 +33,7 @@ export default class HTML extends React.Component {
           {this.props.postBodyComponents}
         </body>
       </html>
+
     );
   }
 }

@@ -1,7 +1,7 @@
 module.exports = {
-  siteTitle: "daiNt", // <title>
-  shortSiteTitle: "daiNt", // <title> ending for posts and pages
-  siteDescription: "daiNt",
+  siteTitle: "Ahihi", // <title>
+  shortSiteTitle: "Ahihi", // <title> ending for posts and pages
+  siteDescription: "Thích thì zô kok thích thì zô",
   siteUrl: "https://www.attejuvonen.fi",
   // pathPrefix: "",
   siteImage: "preview.jpg",
@@ -17,8 +17,8 @@ module.exports = {
   authorYoutube: "https://www.youtube.com/channel/UCfHqfHoSYL0V_fXA_JQkeLw?view_as=subscriber",
 
   /* header text */
-  headerTitle: "daiNt",
-  headerSubTitle: "",
+  headerTitle: "Ahihi",
+  headerSubTitle: "Thích thì zô kok thích thì zô",
 
   /* manifest.json */
   manifestName: "daiNt",
