@@ -21,7 +21,9 @@ const SearchPage = props => {
 
   return (
     <React.Fragment>
+      
       <Article theme={theme}>
+      
         <div className="icon">
           <AlgoliaIcon />
         </div>

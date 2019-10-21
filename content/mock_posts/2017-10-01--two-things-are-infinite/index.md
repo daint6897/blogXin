@@ -1,6 +1,6 @@
 ---
 title: Two things are infinite the universe and human stupidity
-tags: ["sayings", "wisdom"]
+tags: ["AHIHI", "wisdom"]
 cover: photo-1490474418585-ba9bad8fd0ea.jpg
 author: greg lobinski
 ---
@@ -16,7 +16,17 @@ Fusce a metus eu diam varius congue nec nec sapien. Vestibulum orci tortor, soll
 Nullam eros mi, mollis in sollicitudin non, tincidunt sed enim. Sed et felis metus, rhoncus ornare nibh. Ut at magna leo. Suspendisse egestas est ac dolor imperdiet pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor, erat sit amet venenatis luctus, augue libero ultrices quam, ut congue nisi risus eu purus. Cras semper consectetur elementum.
 
 ### Cras semper consectetur elementum
+```css
+  .image {
+    height: 0;
+    /* (heightImage/widthImage)*100% */
+    padding-bottom: 70%; 
+  }
+```
 
+```js
+    $("#hihi").focus
+```
 Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.
 
 <re-img src="photo-1490474418585-ba9bad8fd0ea.jpg"></re-img>
