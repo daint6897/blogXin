@@ -176,8 +176,8 @@ class Menu extends React.Component {
             list-style: none;
             margin: 0;
             padding: 0; /* 0 ${theme.space.s}; */
-            position: relative;
             width: 100%;
+            position:relative
           }
 
           @below desktop {

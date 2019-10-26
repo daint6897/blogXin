@@ -48,11 +48,13 @@ export const NavMenu = styled.ul<{ mobile?: boolean }>`
 
 export const NavMenuItem = styled.li`
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   border: 0;
   background: transparent;
   outline: none;
   text-decoration: none;
+  justify-content : center;
+  align-items:center
 `;
 
 export const NavLink = styled(Link)`
@@ -79,7 +81,7 @@ export const ToggleSearchButton = styled.button`
   outline: none;
   border: 0;
   transition: opacity .5s;
-
+  font-size: 16px;
   &:hover {
     opacity: 1;
   }

@@ -120,7 +120,7 @@ export const Search: FunctionComponent = () => {
           onClick={toggleSearch}
         >
           <FaSearch/>
-          Search
+          
         </ToggleSearchButton>
       </NavMenuItem>
 
