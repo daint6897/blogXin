@@ -6,7 +6,7 @@ import { FaHome, FaSearch, FaEnvelope, FaTag, FaUser, FaRss } from "react-icons/
 
 import Item from "./Item";
 import Expand from "./Expand";
-
+import {Search} from "../search_copy/index";
 class Menu extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +15,7 @@ class Menu extends React.Component {
     this.items = [
       { to: "/", label: "Home", icon: FaHome },
       { to: "/tags/", label: "Tags", icon: FaTag },
-      { to: "/search/", label: "Search", icon: FaSearch },
+      // { to: "/search/", label: "Search", icon: FaSearch },
       // { to: "/follow/", label: "Follow", icon: FaRss },
       // { to: "/contact/", label: "Contact", icon: FaEnvelope },
       // { to: "/about/", label: "About", icon: FaUser }
@@ -137,7 +137,9 @@ class Menu extends React.Component {
             {this.items.map(item => (
               <Item item={item} key={item.label} icon={item.icon} theme={theme} />
             ))}
+            <Search/>
           </ul>
+          
           {this.state.hiddenItems.length > 0 && <Expand onClick={this.toggleMenu} theme={theme} />}
           {open &&
             screenWidth >= 1024 && (
@@ -147,8 +149,8 @@ class Menu extends React.Component {
                 ))}
               </ul>
             )}
+            
         </nav>
-
         {/* --- STYLES --- */}
         <style jsx>{`
           .menu {

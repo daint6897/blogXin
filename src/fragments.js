@@ -18,6 +18,7 @@ const blogPostTeaserFields = `
             frontmatter {
                 title
                 tags
+                path
                 cover {
                     children {
                         ... on ImageSharp {

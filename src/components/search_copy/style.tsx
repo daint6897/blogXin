@@ -7,7 +7,7 @@ export const SearchBox = styled.div<{ readonly open: boolean }>`
   position: absolute;
   width: 400px;
   background-color: #fff;
-  left: -338px;
+  left: 0;
   top: 40px;
   border-radius: 5px;
   box-shadow: 0 0 3px rgba(0, 0, 0, .03), 0 3px 46px rgba(0, 0, 0, .1);

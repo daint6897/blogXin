@@ -17,6 +17,7 @@ const Teaser = props => {
         title,
         tags,
         author,
+        path,
         cover: {
           children: [{ fluid }]
         }
@@ -28,7 +29,7 @@ const Teaser = props => {
   return (
     <React.Fragment>
       <li>
-        <Link to={slug} key={slug} className="link">
+        <Link to={path} key={path} className="link">
           <div className="gatsby-image-outer-wrapper">
             <Picture fluid={fluid} critical={index==0}/>
           </div>

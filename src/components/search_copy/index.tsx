@@ -22,6 +22,7 @@ export const Search: FunctionComponent = () => {
   const searchRef                 = useRef<HTMLDivElement>(null);
   const resultRefs: HTMLElement[] = [];
 
+  
   // Responsible for closing the search dialog when clicked outside the search dialog
   useEffect(() => {
     document.addEventListener('click', handleClickOutside, true);
@@ -39,11 +40,13 @@ export const Search: FunctionComponent = () => {
   const search = (event) => {
     const input = event.target.value;
     if (!input || !(window as any).__LUNR__ || input === '') {
+      
       setQuery(input);
       return setResults([]);
     }
     const lunrIndex = (window as any).__LUNR__['en']; // tslint:disable-line
     setResults(lunrIndex.index.search(input + '*').map(({ref}) => {
+
       return lunrIndex.store[ref]; // tslint:disable-line
     }));
     if (results.length > 0) {
@@ -107,6 +110,7 @@ export const Search: FunctionComponent = () => {
   // Toggles the search dialog
   const toggleSearch = () => setIsOpen(!isOpen);
 
+  
   return (
     <>
       <NavMenuItem>
@@ -116,6 +120,7 @@ export const Search: FunctionComponent = () => {
           onClick={toggleSearch}
         >
           <FaSearch/>
+          Search
         </ToggleSearchButton>
       </NavMenuItem>
 
@@ -132,6 +137,7 @@ export const Search: FunctionComponent = () => {
           <ResultsTitle>Results ({results.length})</ResultsTitle>
           <SearchResults ref={resultListRef}>
             {results.map((item, index) => (
+              
               <SearchResult
                 onMouseOver={() => setSelected(index)} // tslint:disable-line
                 key={index}

@@ -6,12 +6,13 @@ import Teaser from "./Teaser";
 const Blog = props => {
   const posts = props.posts;
   const theme = props.theme;
-
+console.log("TCL: post", posts)
   return (
     <React.Fragment>
       <main className="main">
         <ul>
           {posts.map((post,index) => {
+            
             const {
               node,
               node: {

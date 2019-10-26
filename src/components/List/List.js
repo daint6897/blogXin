@@ -4,21 +4,24 @@ import { Link } from "gatsby";
 
 const List = props => {
   const { edges, theme } = props;
+  console.log("TCL: edgesssss", edges)
 
   return (
     <React.Fragment>
       <ul>
         {edges.map(edge => {
+          console.log('edge',edge);
           const {
             node: {
-              frontmatter: { title },
+              frontmatter: { title,path },
               fields: { slug }
             }
           } = edge;
 
+
           return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
+            <li key={path}>
+              <Link to={path}>{title}</Link>
             </li>
           );
         })}
