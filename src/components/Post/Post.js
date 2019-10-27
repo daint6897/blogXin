@@ -35,8 +35,10 @@ const LeftSidebar = styled.div<{ show?: boolean }>`
   min-width: 255px;
   max-width: 225px;
   transition: opacity .5s;
-
-  @media (max-width: 900) {
+  // position : fixed;
+  // top:40px;
+  // right:20px;
+  @media (max-width: 300) {
     position: fixed;
     opacity: ${props => props.show ? 1 : 0};
     z-index: 1000;
@@ -54,8 +56,7 @@ const TocWrapper = styled.div`
   padding: 40px 30px 40px 0;
 `;
 const Post = props => {
-  const [showToc, setShowToc] = useState(false);
-  const toggleToc             = () => setShowToc(!showToc);
+ 
   const {
     post,
     post: {
@@ -83,38 +84,14 @@ const Post = props => {
 
         
       </header>
-      {post.headings.find(h => h.depth > 1) &&
-        <>
-            <LeftSidebar show={true}>
-                <TocWrapper>
-                    <Toc onClick={toggleToc}/>
-                </TocWrapper>
-            </LeftSidebar>
-            
-            <ToggleTocButton
-                role={`button`}
-                aria-label={`Toggle table of contents`}
-                onClick={toggleToc}
-            >
-              {showToc ? <FaTimes/> : <FaAlignJustify/>}
-            </ToggleTocButton>
-        </>
-        }
+     
+      
 
-        <LeftSidebar show={true}>
-                <TocWrapper>
-                    <Toc onClick={toggleToc}/>
-                </TocWrapper>
-            </LeftSidebar>
-            
-            <ToggleTocButton
-                role={`button`}
-                aria-label={`Toggle table of contents`}
-                onClick={toggleToc}
-            >
-              {showToc ? <FaTimes/> : <FaAlignJustify/>}
-            </ToggleTocButton>
+       
       <Bodytext content={post} theme={theme} />
+      
+  
+      
       <footer>
          {/*<Author note={authornote} theme={theme} /> */}
          <NextPrev next={nextPost} prev={prevPost} theme={theme} />

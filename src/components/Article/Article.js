@@ -13,8 +13,9 @@ const Article = props => {
         .article {
           padding: ${theme.space.inset.default};
           padding-bottom: 0px !important;
-          margin: 0 auto;
+          // margin: 0 auto;
         }
+        
         @from-width tablet {
           .article {
             padding: ${`calc(${theme.space.default}) calc(${theme.space.default} * 2)`};
