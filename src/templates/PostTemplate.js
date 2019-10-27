@@ -52,6 +52,9 @@ export const postQuery = graphql`
       id
       html
       htmlAst
+      headings {
+        depth
+      }
       fields {
         slug
         prefix

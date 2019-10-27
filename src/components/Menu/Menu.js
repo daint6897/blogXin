@@ -7,11 +7,13 @@ import { FaHome, FaSearch, FaEnvelope, FaTag, FaUser, FaRss } from "react-icons/
 import Item from "./Item";
 import Expand from "./Expand";
 import {Search} from "../search_copy/index";
+
+
 class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.itemList = React.createRef();
-
+    // this.handleKeyDown = this.handleKeyDown.bind(this)
     this.items = [
       { to: "/", label: "Home", icon: FaHome },
       { to: "/tags/", label: "Tags", icon: FaTag },
@@ -26,7 +28,8 @@ class Menu extends React.Component {
 
   state = {
     open: false,
-    hiddenItems: []
+    hiddenItems: [],
+    openSearch : false
   };
 
   static propTypes = {
@@ -36,9 +39,12 @@ class Menu extends React.Component {
     theme: PropTypes.object.isRequired
   };
 
+
+
   componentDidMount() {
     this.renderedItems = this.getRenderedItems();
   }
+
 
   componentDidUpdate(prevProps) {
     if (
@@ -128,7 +134,7 @@ class Menu extends React.Component {
 
   render() {
     const { screenWidth, theme } = this.props;
-    const { open } = this.state;
+    const { open ,openSearch} = this.state;
 
     return (
       <React.Fragment>
@@ -137,7 +143,9 @@ class Menu extends React.Component {
             {this.items.map(item => (
               <Item item={item} key={item.label} icon={item.icon} theme={theme} />
             ))}
-            <Search/>
+            <Search
+              openSearch = {openSearch}
+            />
           </ul>
           
           {this.state.hiddenItems.length > 0 && <Expand onClick={this.toggleMenu} theme={theme} />}

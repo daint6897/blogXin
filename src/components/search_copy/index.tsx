@@ -12,7 +12,8 @@ interface SearchResult {
   path: string;
 }
 
-export const Search: FunctionComponent = () => {
+export const Search: FunctionComponent = (props) => {
+  
   const [isOpen, setIsOpen]       = useState<boolean>(false);
   const [query, setQuery]         = useState<string>('');
   const [results, setResults]     = useState<SearchResult[]>([]);
@@ -22,12 +23,23 @@ export const Search: FunctionComponent = () => {
   const searchRef                 = useRef<HTMLDivElement>(null);
   const resultRefs: HTMLElement[] = [];
 
-  
+ 
   // Responsible for closing the search dialog when clicked outside the search dialog
   useEffect(() => {
     document.addEventListener('click', handleClickOutside, true);
-    return () => document.removeEventListener('click', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown, true);
+    return () => {
+      document.removeEventListener('click', handleClickOutside)
+      document.removeEventListener('keydown', handleKeyDown)
+    };
   });
+
+  const handleKeyDown = (e)=>{
+    if(e.keyCode == 187){
+      setIsOpen(true);
+    }
+    
+}
 
   const handleClickOutside = (event) => {
     if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -110,6 +122,7 @@ export const Search: FunctionComponent = () => {
   // Toggles the search dialog
   const toggleSearch = () => setIsOpen(!isOpen);
 
+  // console.log('isOpen',isOpen);
   
   return (
     <>
