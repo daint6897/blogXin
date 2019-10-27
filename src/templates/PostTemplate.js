@@ -2,15 +2,14 @@ import PropTypes from "prop-types";
 import React,{useState } from "react";
 import { graphql } from "gatsby";
 require("prismjs/themes/prism-okaidia.css");
-
 import Seo from "../components/Seo";
 import Article from "../components/Article";
 import Post from "../components/Post";
-import { ThemeContext } from "../layouts";
-
 import styled from "styled-components";
 import Toc from "../components/toc";
 import {FaAlignJustify, FaTimes} from "react-icons/fa";
+import { ThemeContext } from "../layouts";
+
 const ToggleTocButton = styled.button`
   display: flex;
   position: fixed;
@@ -33,9 +32,9 @@ const ToggleTocButton = styled.button`
   }
 `;
 const LeftSidebar = styled.div<{ show?: boolean }>`
-  min-width: 255px;
-  max-width: 225px;
-  margin-left: 40px;
+  min-width: 0px;
+  max-width: 0px;
+  padding-left: 40px;
   transition: opacity .5s;
 
   
@@ -52,26 +51,64 @@ const LeftSidebar = styled.div<{ show?: boolean }>`
   }
 
   @media (max-width: 500px) {
-    display: none;
+    display: ${props => props.show ? 'unset' : 'none'};
+    width: 100%;
+    position:fixed;
+    top: 40px;
+    left: 0px;
+    height: 100vh;
+    background: #fff;
+    max-width:1000px;
+    padding:0px;  
+    font-size: 18px;
   }
 `;
 const TocWrapper = styled.div`
   position: sticky;
   top: 70px;
   padding: 40px 30px 40px 0;
+  white-space: nowrap;
+  @media (max-width: 500px) {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+}
 `;
-
 const BodyContent = styled.div`
   display:flex
   justify-content: center;
   @media (max-width: 500px) {
     display: unset;
   }
+  h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    display: block;
+    content: " ";
+    height: 60px;
+    margin-top: -60px;
+    visibility: hidden;
+}
 `;
+// const LeftSidebarWrapper = styled.div`
+// @media (max-width: 500px) {
+//   z-index: ${props => props.show ? 10 : -100};
+//   width: 100%;
+//   position:fixed;
+//   top: 0px;
+//   left: 0px;
+//   height: 100vh;
+//   background: #fff;
+ 
+ 
+// }
+// `;
+
+
 
 const PostTemplate = props => {
   const [showToc, setShowToc] = useState(false);
-  let toggleToc             = () => setShowToc(!showToc);
+  const toggleToc             = () => setShowToc(!showToc);
   const {
     data: {
       post,
@@ -82,7 +119,7 @@ const PostTemplate = props => {
 
   return (
     <React.Fragment>
- <BodyContent>
+    <BodyContent>
       <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
@@ -99,11 +136,12 @@ const PostTemplate = props => {
 
       {post.headings.find(h => h.depth > 1) &&
         <>
-            <LeftSidebar show={showToc}>
-                <TocWrapper>
-                    <Toc onClick={toggleToc}/>
-                </TocWrapper>
-            </LeftSidebar>
+            {/* <LeftSidebarWrapper></LeftSidebarWrapper> */}
+              <LeftSidebar show={showToc}>
+                  <TocWrapper>
+                      <Toc onClick={toggleToc}/>
+                  </TocWrapper>
+              </LeftSidebar>
             
             <ToggleTocButton
                 role={`button`}

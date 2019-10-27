@@ -70,7 +70,7 @@
   ],
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop && gatsby clean",
+    "develop": "gatsby clean && gatsby develop ",
     "deploy-github": "gatsby clean && npm run build && node ./deploy-github",
     "devhost": "gatsby develop --host 192.168.0.112",
     "format": "prettier --write 'src/**/*.js'",
