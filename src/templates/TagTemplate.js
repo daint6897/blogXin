@@ -20,7 +20,9 @@ const TagTemplate = props => {
     <React.Fragment>
       <ThemeContext.Consumer>
         {theme => (
-          <Article theme={theme}>
+          <Article theme={theme}
+           
+          >
             <header>
               <Headline theme={theme}>
                 <span>Posts with tag</span> <FaTag />

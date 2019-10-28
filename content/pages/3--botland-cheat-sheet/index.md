@@ -2,7 +2,7 @@
 title: Bot Land Cheat Sheet
 ---
 
-The purpose of this page is to allow quick lookups on specific things about Bot Land game mechanics. I wanted to consolidate this information in one place, since it was scattered all over the internet (some of the docs were available only in-game, some information only in Discord chat, etc.) You can edit this page <a href="https://github.com/baobabKoodaa/blog/blob/master/content/pages/3--botland-cheat-sheet/index.md" target="_blank">here</a>.
+The purpose of this page is to allow quick lookups on specific things about Bot Land game mechanics. I wanted to consolidate this information in one place, since it was scattered all over the internet (some of the docs were available only in-game, some information only in Discord chat, etc.) You can edit this page here</a>.
 
 <!--<re-img
     src="honeypot.jpg"
@@ -18,7 +18,7 @@ The purpose of this page is to allow quick lookups on specific things about Bot 
 | Class         | Damage        | Min-range | Max-range | Directionality   | Delay      | Blind-fireable | Reflectable |
 | --------------|:-------------:|:---------:|:---------:|:----------------:|:----------:|:--------------:|:-----------:|
 | Melee         | 300-550       | 1         |    1-2    | Only cardinal    | 0          |    No          |   No        |
-| Lasers        | 100-400       | 1         |    3-5    | Only cardinal    | 0          |    Yes         |   Yes       | 
+| Lasers        | 100-400       | 1         |    3-5    | Only cardinal    | 0          |    Yes         |   Yes       |
 | Missiles      | 200-300       | 1         |    3-4    | Any direction    | 0          |    No          |   Yes       |
 | Artillery     | 250-500       | 5         |    7-7    | Any direction    | 2          |    No          |   No        |
 | Zappers       | 100-350       | -         |     -     | -                | 0          |    -           |   -         |
@@ -31,7 +31,6 @@ The purpose of this page is to allow quick lookups on specific things about Bot 
 - Melee can not be blind-fired (you can not hit cloaked enemies).
 - Melee has the ability to charge (simultaneously move and attack from 2 tiles distance in a cardinal direction).
 - Melee has no cooldown, but charge does.
-
 
 | Weapon        | Damage        | Charge cooldown |
 | --------------|:-------------:|:---------------:|
@@ -137,7 +136,6 @@ The purpose of this page is to allow quick lookups on specific things about Bot 
 | Landmines III             | 600           | 17            |
 
 <!-- Hack to fix a whitespace issue. -->
-##
 
 ---
 
@@ -173,8 +171,6 @@ The purpose of this page is to allow quick lookups on specific things about Bot 
 
 ## Armor
 
-- TODO 
-
 ## EMP
 
 - TODO on LASERS, MISSILES, MELEE, ARTILLERY, ZAPPER, REPAIR, CLOAKING, SHIELD, REFLECT, TELEPORT, LANDMINES, or EMP.
@@ -186,7 +182,6 @@ The purpose of this page is to allow quick lookups on specific things about Bot 
 ## Area Repair
 
 - TODO
-
 
 ---
 
@@ -216,6 +211,3 @@ The purpose of this page is to allow quick lookups on specific things about Bot 
 - You can share information between bots by utilizing shared variables `sharedA` to `sharedE`.
 
 ## Related links
-
-- [ESLint Bot Land plugin](https://www.npmjs.com/package/eslint-plugin-botland)
-- [Youtube channel of the developer](https://www.youtube.com/channel/UCJFxRNHar-c_lKYxFMIPg_g)

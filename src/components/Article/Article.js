@@ -6,7 +6,7 @@ const Article = props => {
 
   return (
     <React.Fragment>
-      <article className="article">{children}</article>
+      <article className="article articleTag">{children}</article>
 
       {/* --- STYLES --- */}
       <style jsx>{`
@@ -14,6 +14,10 @@ const Article = props => {
           padding: ${theme.space.inset.default};
           padding-bottom: 0px !important;
           // margin: 0 auto;
+        }
+        
+        .articleTag {
+          margin: 0 auto;
         }
         
         @from-width tablet {

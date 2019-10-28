@@ -52,6 +52,7 @@
     "react-md-spinner": "^0.3.0",
     "react-obfuscate": "^3.6.2",
     "react-share": "^2.2.0",
+    "react-typography": "^0.16.19",
     "react-visibility-sensor": "^5.1.1",
     "rehype-react": "^3.1.0",
     "styled-components": "^4.4.0",
@@ -62,6 +63,7 @@
     "tocbot": "^4.8.1",
     "typeface-open-sans": "0.0.54",
     "typescript": "^3.6.3",
+    "typography": "^0.16.19",
     "use-dark-mode": "^2.3.1",
     "yaml-loader": "^0.5.0"
   },
@@ -70,8 +72,9 @@
   ],
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby clean && gatsby develop ",
-    "deploy-github": "gatsby clean && npm run build && node ./deploy-github",
+    "dev": "gatsby clean && gatsby develop ",
+    "dep": "gatsby clean && npm run build && node ./deploy-github",
+    "dep1": "npm run build && node ./deploy-github",
     "devhost": "gatsby develop --host 192.168.0.112",
     "format": "prettier --write 'src/**/*.js'",
     "lint-errors": "eslint src/**/*.{js,jsx} --quiet",
