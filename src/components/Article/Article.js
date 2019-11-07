@@ -6,7 +6,7 @@ const Article = props => {
 
   return (
     <React.Fragment>
-      <article className="article articleTag">{children}</article>
+      <article className="article articleTagnpm run">{children}</article>
 
       {/* --- STYLES --- */}
       <style jsx>{`
@@ -16,9 +16,7 @@ const Article = props => {
           // margin: 0 auto;
         }
         
-        .articleTag {
-          margin: 0 auto;
-        }
+     
         
         @from-width tablet {
           .article {

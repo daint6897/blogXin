@@ -38,6 +38,7 @@ path:  "/markdown-cheatsheet"
 ##Image
 ```md
 ![alt](http://~)
+![](img.png)
 ```
 
 ##List dạng gạch đầu dòng
