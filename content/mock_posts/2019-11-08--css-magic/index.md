@@ -332,3 +332,8 @@ https://jsfiddle.net/hieuns/ot2uqsd4/?utm_source=website&utm_medium=embed&utm_ca
 }
 ```
 https://jsfiddle.net/hieuns/4gn0ohdr/?utm_source=website&utm_medium=embed&utm_campaign=4gn0ohdr
+
+## Text content area tự xuống dòng
+```css
+  white-space: pre-wrap;
+```
