@@ -1,1 +1,4 @@
+
 sudo chown $USER /var/run/docker.sock
+ ---list image 
+ sudo docker image ls
