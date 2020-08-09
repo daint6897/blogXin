@@ -2,3 +2,7 @@
 sudo chown $USER /var/run/docker.sock
  ---list image 
  sudo docker image ls
+ 
+ --run composer in docker 
+ docker-compose exec app composer install
+
