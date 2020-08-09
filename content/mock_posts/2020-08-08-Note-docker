@@ -6,3 +6,5 @@ sudo chown $USER /var/run/docker.sock
  --run composer in docker 
  docker-compose exec app composer install
 
+--build 
+docker build -t learning-docker/laravel:v1 .
